@@ -1,0 +1,24 @@
+{
+  "name": "project-1-hashassin-group-12",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/2023-Spring-CS-451-551/project-1-hashassin-group-12.git",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.3",
+    "@commitlint/config-conventional": "^17.4.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.3",
+    "standard-version": "^9.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "scripts": {
+    "release": "standard-version",
+    "commit": "git cz",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

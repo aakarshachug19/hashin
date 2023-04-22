@@ -1,0 +1,19 @@
+{
+  "workbench.colorCustomizations": {
+    "commandCenter.border": "#15202b99",
+    "sash.hoverBorder": "#64ff47",
+    "statusBar.background": "#39ff14",
+    "statusBar.border": "#39ff14",
+    "statusBar.foreground": "#15202b",
+    "statusBarItem.hoverBackground": "#23e000",
+    "statusBarItem.remoteBackground": "#39ff14",
+    "statusBarItem.remoteForeground": "#15202b",
+    "titleBar.activeBackground": "#39ff14",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.border": "#39ff14",
+    "titleBar.inactiveBackground": "#39ff1499",
+    "titleBar.inactiveForeground": "#15202b99"
+  },
+  "peacock.color": "#39ff14",
+  "rust-analyzer.linkedProjects": ["./cli/Cargo.toml"]
+}
