@@ -30,26 +30,6 @@ enum Command {
     HashesFromFile(HashesFromFileOpts),
 }
 
-// fn main() -> Result<()> {
-//     // read in any environment variables set in a .env file
-//     dotenv().ok();
-
-//     // initialize a logger
-//     tracing_subscriber::fmt::init();
-
-//     let opts = Opts::parse();
-
-//     trace!("opts: {:?}", opts);
-
-//     match opts.command {
-//         Command::SimpleBench(opts) => simple_bench(&opts)?,
-//         Command::GenPasswords(opts) => gen_passwords(&opts)?,
-//         Command::HashesFromFile(opts) => hashes_from_file(&opts)?,
-//     }
-
-//     Ok(())
-// }
-
 fn main() -> Result<()> {
     // read in any environment variables set in a .env file
     dotenv().ok();
@@ -61,21 +41,6 @@ fn main() -> Result<()> {
 
     trace!("opts: {:?}", opts);
 
-    // Start listening for incoming connections
-    let listener = TcpListener::bind("0.0.0.0:8888")?;
-    for stream in listener.incoming() {
-        match stream {
-            Ok(mut stream) => {
-                // Handle the incoming connection
-                handle_connection(&mut stream)?;
-            }
-            Err(e) => {
-                eprintln!("failed to accept incoming connection: {}", e);
-            }
-        }
-    }
-
-    // Execute the appropriate command based on the options provided via the CLI
     match opts.command {
         Command::SimpleBench(opts) => simple_bench(&opts)?,
         Command::GenPasswords(opts) => gen_passwords(&opts)?,
